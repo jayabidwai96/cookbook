@@ -10,6 +10,12 @@ app.config["MONGO_URI"] = "mongodb://root:r00tUser@myfirstcluster-shard-00-00.w5
 mongo = PyMongo(app)
 
 @app.route('/')
+def home_page():
+    return render_template("home.html")
+
+
+
+    
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html", 
@@ -26,7 +32,8 @@ def add_recipe():
 @app.route('/full_recipe')
 def full_recipe():
     return render_template('fullrecipe.html',
-                           categories=mongo.db.categories.find())
+                           recipes=mongo.db.recipes.find())
+
 
 
 @app.route('/insert_recipe', methods=['POST'])
