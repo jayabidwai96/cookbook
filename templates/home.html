@@ -1,6 +1,7 @@
 {% extends 'base.html'%} {% block content %}
 
 <div class="container-img">
+<div class="row">
     <img id="image" src="/static/img/hero.jpg" class="responsive-img">
     <div class="centered-img  hide-on-small-only">
         <div class="centered-img-p">
@@ -11,6 +12,7 @@
         <div class="centered-img-p">
             <h4>Eat. Well.</h4>
         </div>
+    </div>
     </div>
 </div>
 
@@ -79,21 +81,7 @@
             </div>
         </div>
 
-        
-
-<div class="fixed-action-btn">
-  <a class="btn-floating btn-large red">
-    <i class="large material-icons">mode_edit</i>
-  </a>
-  <ul>
-    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-    
-  </ul>
-</div>
-      
-
-    <div class="row">
+<div class="row">
     <ul class="collapsible" data-collapsible="accordion">
         {% for recipe in recipes %}
         <li>
